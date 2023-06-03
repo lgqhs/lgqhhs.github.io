@@ -10,12 +10,15 @@
             margin: 0;
             padding: 0;
         }
+		body{
+			 align-items: center;
+		}
         a{
             text-decoration: none;
         }
         li{
-            list-style: none;
-        }
+			list-style: none;
+		}
         .header{
             display: block;
             width: 1130px;
@@ -25,6 +28,7 @@
         }
         .logo{
             float: left;
+			margin-left: 100px;
             display: block;
             width: 55px;
             height: 55px;
@@ -47,29 +51,35 @@
         }
         /* 中间部分开始 */
         .middle{
-            position: relative;
-            height: 588px;
-            background-image: url('img/background_register.png');
-            background-repeat: no-repeat;
-            background-position: 50% 0;
+        margin: 0 auto;
+        text-align: center;
+         width: 1000px;
+		 height: 400px;
+		 background-color: aqua;
+		 background-image: url(./img/background_register.png);
+		 background-size: 100% 100%;
+		 background-repeat: no-repeat;
+		 background-position: 60% 0;
         }
-        .user{
-            
-            top: 30px;
-            float: right;
-            width: 410px;
-            height: 556px;
+       .user{
+		  margin-top: 20px;
+			float: right;
+			margin-right: 20px;
+            width: 260px;
+            height: 360px;
             background-color: white;
+			margin-left: 100px;
         }
+		
+		
+		
         .user_header{
             height: 82px;
-            text-align: center;
             line-height: 82px;
         }
         .user_header a{
-            padding: 27px 0 24px;
-            text-align: center;
-            font-size: 24px;
+            margin: -10px;
+            font-size: 16px;
             color: #666;
         }
         .user_header a:hover{
@@ -84,28 +94,28 @@
         }
         .user_middle input{
             color: #686868;
-        width: 306px;
-        height: 25px;
+        width: 180px;
+        height: 20px;
         border: 1px solid #e0e0e0;
-        padding: 13px 16px 13px 14px;
-        margin: 0 0 20px 35px;
+        margin: 5px 5px;
+       padding: 8px;
         }
         .user_middle > a{
-            display: block;
-            width: 308px;
+        display: block;
+        
+		width: 190px;
         height: 25px;
         background-color: #FF6700;
-        padding: 13px 16px 13px 14px;
-        margin: 0 0 15px 35px;
+        margin:10px 30px;
+		padding: 5px 5px;
         color: white;
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
         line-height: 25px;
         }
         .user_middle li{
-            width: 308px;
-            padding-bottom: 35px;
-            margin: 0 0 0 45px;
+            
+            padding-bottom: 10px;
             font-size: 14px;
             text-align: center;
             
@@ -118,31 +128,39 @@
             color: #FF6700;
         }
         .user_footer img{
-            margin: 80px 0 0 80px;
+            margin-top: 5px;
         }
-        .footer{
-            display: block;
-            height: 30px;
-            margin: 100px 0 0 600px;
-            
-        }
-        .footer li{
-            float: left;
-        }
-        .footer li a ,
-        .footer li span {
-            color: #757575;
-            font-size: 14px;
-        }
-        .footer li a{
-        display: inline-block;
-            height: 19px;
-            padding: 0 10px;
-            text-align: center;
-        }
-        .footer li a:hover{
+        
+		.footer{
+			
+			text-align: center;
+			margin-top: 20px;
+			
+		}
+		 .footer a{
+			 color: #686868;
+			 font-size: 16px;
+		 }
+		
+	
+        .footer a:hover{
             color: #FF6700;
         }
+		
+		.conceal{
+		    position: absolute;
+			margin-left: 195px;
+			margin-top: -35px;
+		    width: 30px;
+		    height: 30px;
+		    background-image: url(./img/yincang.gif);
+		    background-size: 100% 100%;   
+		    cursor: pointer;
+		}
+		.conceal.yincang{
+		    background-image: url(./img/xianshi.gif);
+		    background-size: 100% 100%; 
+		}
 
     </style>
     
@@ -176,28 +194,53 @@
             <div class="user_middle">
                 <input type="text" placeholder="邮箱/手机号码/小米ID">
                 <input type="password" name="mima" id="password" placeholder="密码">
+				<div class="conceal" id='conceal'></div>
+				
                 <a href="">登录</a>
                 <li><a href="">手机短信登录/注册</a></li>
                 <li><a href="login.html">立即注册</a> <span>|</span> <a href="#">忘记密码</a></li>
             </div>
             <div class="user_footer"><img src="img/register_middle_last.png" alt=""></div>
+			
+			 
         </div>
-    </div>
+		<div class="user2">
+			
+		</div>
+	</div>
     <!-- 中间部分 结束 -->
 
 
     <!-- 尾部部分 开始 -->
     <div class="footer">
-        <ul>
-            <li><a href="#">简体</a><span>|</span></li>
-            <li><a href="#">繁体</a><span>|</span></li>
-            <li><a href="#">English</a><span>|</span></li>
-            <li><a href="#">常见问题</a><span>|</span></li>
-            <li><a href="#">隐私政策</a></li>
-        </ul>
+        <div class="footerzi">
+			<a href="#">简体</a><span>|</span>
+            <a href="#">繁体</a><span>|</span>
+            <a href="#">English</a><span>|</span>
+            <a href="#">常见问题</a><span>|</span>
+            <a href="#">隐私政策</a>
+		</div>
+            
+        
         
     </div>
     <!-- 尾部部分 结束 -->
+	
+	
+	<script>
+	    var password = document.getElementById('password');
+	    var anniu = document.getElementById('conceal');
+	    anniu.addEventListener('click',function(){
+	        if(password.type==='password')
+	        {
+	            password.setAttribute('type','text');
+	            anniu.classList.add('yincang');
+	        }else{
+	         password.setAttribute('type','password');
+	            anniu.classList.remove('yincang');
+	        }
+	    })
+	</script>
 </body>
 
 </html>
