@@ -161,7 +161,19 @@
 		    background-image: url(./img/xianshi.gif);
 		    background-size: 100% 100%; 
 		}
-
+		
+		.message{
+			display: inline-block;
+			font-size: 12px;
+			color:#999;
+		}
+		
+		.wrong{
+			color: red;
+		}
+		.right{
+			color: green;
+		}
     </style>
     
 </head>
@@ -193,19 +205,17 @@
             </div>
             <div class="user_middle">
                 <input type="text" placeholder="邮箱/手机号码/小米ID">
-                <input type="password" name="mima" id="password" placeholder="密码">
+                <input type="password" name="mima" class="ipt" id="password" placeholder="请输入6-16位密码">
 				<div class="conceal" id='conceal'></div>
+				<p class="message"></p>
 				
                 <a href="">登录</a>
                 <li><a href="">手机短信登录/注册</a></li>
                 <li><a href="login.html">立即注册</a> <span>|</span> <a href="#">忘记密码</a></li>
             </div>
-            <div class="user_footer"><img src="img/register_middle_last.png" alt=""></div>
-			
-			 
+            <div class="user_footer"><img src="img/register_middle_last.png" alt=""></div>						 
         </div>
-		<div class="user2">
-			
+		<div class="user2">			
 		</div>
 	</div>
     <!-- 中间部分 结束 -->
@@ -230,6 +240,7 @@
 	<script>
 	    var password = document.getElementById('password');
 	    var anniu = document.getElementById('conceal');
+		
 	    anniu.addEventListener('click',function(){
 	        if(password.type==='password')
 	        {
@@ -239,7 +250,23 @@
 	         password.setAttribute('type','password');
 	            anniu.classList.remove('yincang');
 	        }
-	    })
+	    });
+		
+		//获取元素
+		var ipt=document.querySelector('.ipt');
+		var message=document.querySelector('.message');
+		//注册事件失去焦点
+		ipt.onblur=function(){
+			if(this.value.length<6||this.value.length>16){
+				console.log('错误');
+				message.className='message wrong';
+				message.innerHTML='您输入的密码位数不对要求6-16位';
+			}else{
+				message.className='message right';
+				message.innerHTML='您输入的密码位数正确';
+			}
+		}
+		
 	</script>
 </body>
 
